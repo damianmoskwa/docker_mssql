@@ -8,7 +8,8 @@ services:
   mssql:
     image: microsoft/mssql-server-linux:latest
     ports:
-      - 1433:1433
+      - @port:1433
+	  
     volumes:
       - /var/opt/mssql
       - ./sql:/usr/src/app 
